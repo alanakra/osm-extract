@@ -1,6 +1,10 @@
+import os
 import pandas as pd
 import pprint
 import datetime
+
+if not os.path.exists('extracts'):
+    os.makedirs('extracts')
 
 places = pd.read_csv('datas/data-sport-77.csv', sep= ';', usecols=['name', 'com_insee', 'com_nom'], encoding='utf-8')
 
